@@ -3,8 +3,8 @@ import express from "express";
 export const app = express();
 
 app.get("/lingkaran-tabung{/:jarijari}{/:tinggiTabung}", (req, res) => {
-  const circleRadius = parseInt(req.params.jarijari);
-  const heightTube = parseInt(req.params.tinggiTabung);
+  const circleRadius = parseFloat(req.params.jarijari);
+  const heightTube = parseFloat(req.params.tinggiTabung);
 
   (!circleRadius || !heightTube) &&
     res.status(400).send("Wajib memakai params jarijari & tinggiTabung");
