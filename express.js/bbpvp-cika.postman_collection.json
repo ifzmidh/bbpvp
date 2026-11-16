@@ -1,0 +1,222 @@
+{
+  "info": {
+    "_postman_id": "ae7de025-8334-4102-b555-1e11fe34983b",
+    "name": "bbpvp-cika",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31195849"
+  },
+  "item": [
+    {
+      "name": "express",
+      "item": [
+        {
+          "name": "PUT movies :2",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"laskar pelangi\",\n    \"year\": 2026\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{url}}/api/movies/2",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["api", "movies", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE movies :3",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://{{url}}/api/movies/3",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["api", "movies", "3"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CREATE movie",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"bulan - tere liye\",\n    \"year\": 2025\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{url}}/api/movies",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["api", "movies"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET all movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{url}}/api/movies",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["api", "movies"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET movie :1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{url}}/api/movies/1",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["api", "movies", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "restful-api",
+      "item": [
+        {
+          "name": "GET all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{url}}/products",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET product by ID 2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://{{url}}/products/2",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["products", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CREATE product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Kopi hitam aceh gayo\",\n    \"price\": 500000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{url}}/products",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UPDATE product by ID 1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Kopi hitam ambatukam\",\n    \"price\": 200000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://{{url}}/products/1",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["products", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE product by ID 3",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://{{url}}/products/3",
+              "protocol": "http",
+              "host": ["{{url}}"],
+              "path": ["products", "3"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "localhost:3000"
+    }
+  ]
+}
