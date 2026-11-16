@@ -11,21 +11,17 @@ app.get("/lingkaran-tabung{/:jarijari}{/:tinggiTabung}", (req, res) => {
 
   const pi = 3.14;
   //volume tabung
-  const volume = () => pi * circleRadius ** 2 * heightTube;
+  const volume = pi * circleRadius ** 2 * heightTube;
 
   //luas alas tabung
-  const baseArea = () => pi * circleRadius ** 2;
+  const baseArea = pi * circleRadius ** 2;
 
   //keliling alas tabung
-  const circumference = () => 2 * (pi * circleRadius);
+  const circumference = 2 * (pi * circleRadius);
 
-  res.status(200).json({
-    "Jari Jari": circleRadius,
-    Tinggi: heightTube,
-    "Volume Tabung": volume(),
-    "Luas Alas Tabung": baseArea(),
-    "Keliling Alas Tabung": circumference(),
-  });
+  res.status(200).send(`
+    Jari Jari: ${circleRadius}, Tinggi: ${heightTube}, Volume Tabung: ${volume.toFixed(2)}, Luas Alas Tabung: ${baseArea.toFixed(2)}, Keliling Alas Tabung: ${circumference.toFixed(2)},
+  `);
 });
 
 const dataOrang = [
