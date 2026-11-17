@@ -1,0 +1,403 @@
+{
+  "info": {
+    "_postman_id": "ae7de025-8334-4102-b555-1e11fe34983b",
+    "name": "bbpvp-cika",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31195849"
+  },
+  "item": [
+    {
+      "name": "jwt",
+      "item": [
+        {
+          "name": "/categories",
+          "item": [
+            {
+              "name": "getAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{url}}/api/categories",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "categories"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{url}}/api/categories/1",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "categories", "1"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{vault:json_web_token_0sa0}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Romance\",\n    \"description\": \"WHEN YH BISA ROMANCE KAYA DI FILM-FILM\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{url}}/api/categories",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "categories"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{vault:json_web_token_0sa0}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"HORROR\",\n    \"description\": \"JUST SEARCH ON GOOGLE WHAT IS HORROR\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{url}}/api/categories/1",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "categories", "1"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{vault:json_web_token_0sa0}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://{{url}}/api/categories/2",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "categories", "2"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "/movies",
+          "item": [
+            {
+              "name": "getAll",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{url}}/api/movies",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "movies"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://{{url}}/api/movies/1",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "movies", "1"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{vault:json_web_token_0sa0}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"The Silent Voice\",\n    \"year\": 2015,\n    \"categoryId\": 2\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{url}}/api/movies",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "movies"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{vault:json_web_token_0sa0}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\": \"The Silent Voice\",\n    \"year\": 2015,\n    \"categoryId\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{url}}/api/movies/1",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "movies", "1"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{vault:json_web_token_0sa0}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://{{url}}/api/movies/2",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "movies", "2"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "/auth",
+          "item": [
+            {
+              "name": "register",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"bbpbp@gmail.com\",\n    \"password\": \"secret\",\n    \"name\": \"bbpvp\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{url}}/api/auth/register",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "auth", "register"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "login",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"bbpbp@gmail.com\",\n    \"password\": \"secret\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://{{url}}/api/auth/login",
+                  "protocol": "http",
+                  "host": ["{{url}}"],
+                  "path": ["api", "auth", "login"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ],
+      "auth": {
+        "type": "jwt",
+        "jwt": [
+          {
+            "key": "secret",
+            "value": "{{vault:json_web_token_0sa0}}",
+            "type": "string"
+          },
+          {
+            "key": "algorithm",
+            "value": "HS256",
+            "type": "string"
+          },
+          {
+            "key": "isSecretBase64Encoded",
+            "value": false,
+            "type": "boolean"
+          },
+          {
+            "key": "payload",
+            "value": "{}",
+            "type": "string"
+          },
+          {
+            "key": "addTokenTo",
+            "value": "header",
+            "type": "string"
+          },
+          {
+            "key": "headerPrefix",
+            "value": "Bearer",
+            "type": "string"
+          },
+          {
+            "key": "queryParamKey",
+            "value": "token",
+            "type": "string"
+          },
+          {
+            "key": "header",
+            "value": "{}",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [""],
+            "packages": {},
+            "requests": {},
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [""],
+            "packages": {},
+            "requests": {},
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": ""
+    }
+  ]
+}
